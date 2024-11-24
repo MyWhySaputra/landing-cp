@@ -4,7 +4,7 @@ import { FaEnvelope } from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="contact section py-16 bg-gray-50">
+    <section id="contact" className="contact section py-16 bg-gray-50 px-9 ">
       {/* Section Title */}
       <div className="container mx-auto text-center mb-12" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-gray-800">Contact</h2>
