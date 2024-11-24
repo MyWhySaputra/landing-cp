@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Untuk browser berbasis WebKit (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* opsional, buat scrollbar tak terlihat */
+  }
+
+  /* Untuk Firefox */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  /* Untuk Internet Explorer 10+ */
+  *::-ms-scrollbar {
+    display: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
