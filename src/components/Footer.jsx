@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="footer" className="footer bg-gray-100 py-12">
+    <footer id="footer" className="footer bg-gray-100 py-8">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Footer About */}
@@ -137,7 +137,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="container mx-auto text-center mt-8">
+      <div className="container mx-auto text-center mt-12">
         <p className="text-gray-600">
           © <span className="font-semibold text-gray-800">AZ Solusindo</span> All
           Rights Reserved

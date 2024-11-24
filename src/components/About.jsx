@@ -6,47 +6,41 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="about section h-screen pt-28">
+    <section id="about" className="about section h-auto lg:h-screen py-28 bg-gray-50">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           {/* Content */}
           <div
-            className="content space-y-4"
+            className="content space-y-6"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <p className="text-blue-600 text-sm font-semibold uppercase">
+            <p className="text-blue-600 text-sm font-semibold uppercase tracking-wide">
               Who We Are
             </p>
-            <h3 className="text-2xl font-bold text-gray-800">
+            <h3 className="text-3xl font-extrabold text-gray-800">
               Unleashing Potential with Creative Strategy
             </h3>
-            <p className="italic text-gray-600">
+            <p className="text-gray-700 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <ul className="space-y-2">
-              <li className="flex items-start space-x-2">
-                <div className="bi bi-check-circle text-blue-600 text-xl">
-                  <CiCircleCheck />
-                </div>
-                <span className="text-gray-700">
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-3">
+                <CiCircleCheck className=" text-blue-600 text-2xl" />
+                <span className=" flex-1 text-gray-700">
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </span>
               </li>
-              <li className="flex items-start space-x-2">
-                <div className="bi bi-check-circle text-blue-600 text-xl">
-                  <CiCircleCheck />
-                </div>
-                <span className="text-gray-700">
+              <li className="flex items-start space-x-3">
+                <CiCircleCheck className="text-blue-600 text-2xl" />
+                <span className="flex-1 text-gray-700">
                   Duis aute irure dolor in reprehenderit in voluptate velit.
                 </span>
               </li>
-              <li className="flex items-start space-x-2">
-                <div className="bi bi-check-circle text-blue-600 text-xl">
-                  <CiCircleCheck />
-                </div>
-                <span className="text-gray-700">
+              <li className="flex items-start space-x-3">
+                <CiCircleCheck className="text-blue-600 text-2xl" />
+                <span className="flex-1 text-gray-700">
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                   aute irure dolor in reprehenderit in voluptate trideta
                   storacalaperda mastiro dolore eu fugiat nulla pariatur.
@@ -55,37 +49,35 @@ export default function AboutSection() {
             </ul>
             <a
               href="#"
-              className="flex items-center text-white bg-blue-600 py-2 px-4 font-semibold"
+              className="flex items-center text-white bg-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
             >
               <span>Read More</span>
-              <div className="bi bi-arrow-right ml-2">
-                <FaArrowRightLong />
-              </div>
+              <FaArrowRightLong className="ml-3" />
             </a>
           </div>
 
           {/* Images */}
           <div
-            className="about-images space-y-4"
+            className="about-images space-y-6"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <img
                 src={img1}
-                alt=""
-                className="w-full h-auto rounded-md shadow-md"
+                alt="Company Overview"
+                className="w-full h-auto rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
               />
-              <div className="grid grid-rows-2 gap-4">
+              <div className="grid grid-rows-2 gap-6">
                 <img
                   src={img2}
-                  alt=""
-                  className="w-full h-auto rounded-md shadow-md"
+                  alt="Team"
+                  className="w-full h-auto rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
                 />
                 <img
                   src={img3}
-                  alt=""
-                  className="w-full h-auto rounded-md shadow-md"
+                  alt="Office"
+                  className="w-full h-auto rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
                 />
               </div>
             </div>

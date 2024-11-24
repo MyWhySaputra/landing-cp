@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 export default function Navbar() {
   const [scroll, setScroll] = useState(false);
   const [nav, setNav] = useState(false);
+  const [activeLink, setActiveLink] = useState("hero"); // State untuk track link aktif
 
   useEffect(() => {
     let lastScrollTop = 0;
@@ -15,6 +16,27 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // IntersectionObserver untuk mendeteksi elemen mana yang sedang terlihat di layar
+  useEffect(() => {
+    const sections = document.querySelectorAll("section"); // Semua section yang di-scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveLink(entry.target.id); // Set link aktif sesuai id elemen yang terdeteksi
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Elemen dianggap terlihat jika 50% dari elemen tersebut terlihat
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section)); // Amati setiap section
+
+    return () => observer.disconnect(); // Cleanup observer
   }, []);
 
   const handleNav = () => {
@@ -60,7 +82,11 @@ export default function Navbar() {
                 <a
                   href="#hero"
                   onClick={(e) => handleClick(e, "hero")}
-                  className="text-blue-600 hover:text-blue-800 font-semibold"
+                  className={`${
+                    activeLink === "hero"
+                      ? "text-blue-600 font-semibold"
+                      : "hover:text-blue-800 font-medium"
+                  }`}
                 >
                   Home
                 </a>
@@ -69,7 +95,11 @@ export default function Navbar() {
                 <a
                   href="#about"
                   onClick={(e) => handleClick(e, "about")}
-                  className="hover:text-blue-800 font-medium"
+                  className={`${
+                    activeLink === "about"
+                      ? "text-blue-600 font-semibold"
+                      : "hover:text-blue-800 font-medium"
+                  }`}
                 >
                   About
                 </a>
@@ -78,7 +108,11 @@ export default function Navbar() {
                 <a
                   href="#features"
                   onClick={(e) => handleClick(e, "features")}
-                  className="hover:text-blue-800 font-medium"
+                  className={`${
+                    activeLink === "features"
+                      ? "text-blue-600 font-semibold"
+                      : "hover:text-blue-800 font-medium"
+                  }`}
                 >
                   Features
                 </a>
@@ -87,25 +121,37 @@ export default function Navbar() {
                 <a
                   href="#services"
                   onClick={(e) => handleClick(e, "services")}
-                  className="hover:text-blue-800 font-medium"
+                  className={`${
+                    activeLink === "services"
+                      ? "text-blue-600 font-semibold"
+                      : "hover:text-blue-800 font-medium"
+                  }`}
                 >
                   Services
                 </a>
               </li>
               <li>
                 <a
-                  href="#pricing"
-                  onClick={(e) => handleClick(e, "pricing")}
-                  className="hover:text-blue-800 font-medium"
+                  href="#faq"
+                  onClick={(e) => handleClick(e, "faq")}
+                  className={`${
+                    activeLink === "faq"
+                      ? "text-blue-600 font-semibold"
+                      : "hover:text-blue-800 font-medium"
+                  }`}
                 >
-                  Pricing
+                  Questions
                 </a>
               </li>
               <li>
                 <a
                   href="#contact"
                   onClick={(e) => handleClick(e, "contact")}
-                  className="hover:text-blue-800 font-medium"
+                  className={`${
+                    activeLink === "contact"
+                      ? "text-blue-600 font-semibold"
+                      : "hover:text-blue-800 font-medium"
+                  }`}
                 >
                   Contact
                 </a>
@@ -147,42 +193,66 @@ export default function Navbar() {
           <a
             href="#hero"
             onClick={(e) => handleClick(e, "hero")}
-            className="text-blue-600 hover:text-blue-800 font-semibold"
+            className={`${
+              activeLink === "hero"
+                ? "text-blue-600 font-semibold"
+                : "hover:text-blue-800 font-medium"
+            }`}
           >
             Home
           </a>
           <a
             href="#about"
             onClick={(e) => handleClick(e, "about")}
-            className="hover:text-blue-800 font-medium"
+            className={`${
+              activeLink === "about"
+                ? "text-blue-600 font-semibold"
+                : "hover:text-blue-800 font-medium"
+            }`}
           >
             About
           </a>
           <a
             href="#features"
             onClick={(e) => handleClick(e, "features")}
-            className="hover:text-blue-800 font-medium"
+            className={`${
+              activeLink === "features"
+                ? "text-blue-600 font-semibold"
+                : "hover:text-blue-800 font-medium"
+            }`}
           >
             Features
           </a>
           <a
             href="#services"
             onClick={(e) => handleClick(e, "services")}
-            className="hover:text-blue-800 font-medium"
+            className={`${
+              activeLink === "services"
+                ? "text-blue-600 font-semibold"
+                : "hover:text-blue-800 font-medium"
+            }`}
           >
             Services
           </a>
           <a
-            href="#pricing"
-            onClick={(e) => handleClick(e, "pricing")}
-            className="hover:text-blue-800 font-medium"
+            href="#faq"
+            onClick={(e) => handleClick(e, "faq")}
+            className={`${
+              activeLink === "faq"
+                ? "text-blue-600 font-semibold"
+                : "hover:text-blue-800 font-medium"
+            }`}
           >
-            Pricing
+            Questions
           </a>
           <a
             href="#contact"
             onClick={(e) => handleClick(e, "contact")}
-            className="hover:text-blue-800 font-medium"
+            className={`${
+              activeLink === "contact"
+                ? "text-blue-600 font-semibold"
+                : "hover:text-blue-800 font-medium"
+            }`}
           >
             Contact
           </a>

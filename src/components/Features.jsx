@@ -36,8 +36,8 @@ export default function FeaturesSection() {
             <ul className="space-y-6">
               <li>
                 <button
-                  className={`nav-link flex items-center p-4 border rounded-lg hover:bg-gray-100 transition ${
-                    activeTab === 1 ? "bg-gray-100" : ""
+                  className={`nav-link flex items-center p-4 border rounded-lg hover:bg-gray-100 transition-all duration-300 ease-in-out transform ${
+                    activeTab === 1 ? "bg-gray-100 scale-105" : ""
                   }`}
                   onClick={() => handleTabChange(1)}
                 >
@@ -49,15 +49,16 @@ export default function FeaturesSection() {
                       Modi sit est dela pireda nest.
                     </h4>
                     <p className="text-gray-600">
-                      Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate
                     </p>
                   </div>
                 </button>
               </li>
               <li>
                 <button
-                  className={`nav-link flex items-center p-4 border rounded-lg hover:bg-gray-100 transition ${
-                    activeTab === 2 ? "bg-gray-100" : ""
+                  className={`nav-link flex items-center p-4 border rounded-lg hover:bg-gray-100 transition-all duration-300 ease-in-out transform ${
+                    activeTab === 2 ? "bg-gray-100 scale-105" : ""
                   }`}
                   onClick={() => handleTabChange(2)}
                 >
@@ -77,8 +78,8 @@ export default function FeaturesSection() {
               </li>
               <li>
                 <button
-                  className={`nav-link flex items-center p-4 border rounded-lg hover:bg-gray-100 transition ${
-                    activeTab === 3 ? "bg-gray-100" : ""
+                  className={`nav-link flex items-center p-4 border rounded-lg hover:bg-gray-100 transition-all duration-300 ease-in-out transform ${
+                    activeTab === 3 ? "bg-gray-100 scale-105" : ""
                   }`}
                   onClick={() => handleTabChange(3)}
                 >
@@ -107,8 +108,8 @@ export default function FeaturesSection() {
           >
             <div className="tab-content">
               <div
-                className={`tab-pane fade ${
-                  activeTab === 1 ? "active show" : ""
+                className={`tab-pane fade transition-all duration-500 ease-in-out ${
+                  activeTab === 1 ? "active show opacity-100" : "opacity-0"
                 }`}
                 id="features-tab-1"
               >
@@ -121,8 +122,8 @@ export default function FeaturesSection() {
                 )}
               </div>
               <div
-                className={`tab-pane fade ${
-                  activeTab === 2 ? "active show" : ""
+                className={`tab-pane fade transition-all duration-500 ease-in-out ${
+                  activeTab === 2 ? "active show opacity-100" : "opacity-0"
                 }`}
                 id="features-tab-2"
               >
@@ -135,8 +136,8 @@ export default function FeaturesSection() {
                 )}
               </div>
               <div
-                className={`tab-pane fade ${
-                  activeTab === 3 ? "active show" : ""
+                className={`tab-pane fade transition-all duration-500 ease-in-out ${
+                  activeTab === 3 ? "active show opacity-100" : "opacity-0"
                 }`}
                 id="features-tab-3"
               >
