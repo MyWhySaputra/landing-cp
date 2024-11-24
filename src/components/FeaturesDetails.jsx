@@ -6,22 +6,18 @@ export default function FeaturesDetailsSection() {
     <section id="features-details" className="features-details section py-16">
       <div className="container mx-auto px-6 space-y-12">
         {/* Feature Item 1 */}
-        <div className="row flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12">
           {/* Image */}
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div className="lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
             <img
               src={img1}
-              className="img-fluid rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md"
               alt="Feature 1"
             />
           </div>
 
           {/* Content */}
-          <div
-            className="col-lg-5 flex items-center"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <div className="lg:w-1/2" data-aos="fade-up" data-aos-delay="200">
             <div className="content text-left">
               <h3 className="text-2xl font-bold mb-4">
                 Corporis temporibus maiores provident
@@ -41,15 +37,10 @@ export default function FeaturesDetailsSection() {
             </div>
           </div>
         </div>
-
-        {/* Feature Item 2 */}
-        <div className="row flex flex-col lg:flex-row-reverse items-center justify-between space-y-8 lg:space-y-0">
+        {/* Feature Item 1 */}
+        <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12">
           {/* Content */}
-          <div
-            className="col-lg-5 flex items-center"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
+          <div className="lg:w-1/2" data-aos="fade-up" data-aos-delay="200">
             <div className="content text-left">
               <h3 className="text-2xl font-bold mb-4">
                 Neque ipsum omnis sapiente quod quia dicta
@@ -72,20 +63,21 @@ export default function FeaturesDetailsSection() {
                   <span>Veniam quia modi magnam.</span>
                 </li>
               </ul>
-              <a
-                href="#"
-                className="btn bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-700 mt-6 transition"
-              >
-                Learn More
-              </a>
+              <div className="mt-6">
+                <a
+                  href="#"
+                  className=" bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
-
           {/* Image */}
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div className="lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
             <img
               src={img2}
-              className="img-fluid rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md"
               alt="Feature 2"
             />
           </div>

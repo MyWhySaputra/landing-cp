@@ -1,6 +1,8 @@
 import img1 from "../assets/img/about-company-1.jpg";
 import img2 from "../assets/img/about-company-2.jpg";
 import img3 from "../assets/img/about-company-3.jpg";
+import { CiCircleCheck } from "react-icons/ci";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function AboutSection() {
   return (
@@ -25,19 +27,25 @@ export default function AboutSection() {
             </p>
             <ul className="space-y-2">
               <li className="flex items-start space-x-2">
-                <i className="bi bi-check-circle text-blue-600 text-xl"></i>
+                <div className="bi bi-check-circle text-blue-600 text-xl">
+                  <CiCircleCheck />
+                </div>
                 <span className="text-gray-700">
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </span>
               </li>
               <li className="flex items-start space-x-2">
-                <i className="bi bi-check-circle text-blue-600 text-xl"></i>
+                <div className="bi bi-check-circle text-blue-600 text-xl">
+                  <CiCircleCheck />
+                </div>
                 <span className="text-gray-700">
                   Duis aute irure dolor in reprehenderit in voluptate velit.
                 </span>
               </li>
               <li className="flex items-start space-x-2">
-                <i className="bi bi-check-circle text-blue-600 text-xl"></i>
+                <div className="bi bi-check-circle text-blue-600 text-xl">
+                  <CiCircleCheck />
+                </div>
                 <span className="text-gray-700">
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                   aute irure dolor in reprehenderit in voluptate trideta
@@ -47,10 +55,12 @@ export default function AboutSection() {
             </ul>
             <a
               href="#"
-              className="read-more flex items-center text-blue-600 font-semibold hover:underline"
+              className="flex items-center text-white bg-blue-600 py-2 px-4 font-semibold"
             >
               <span>Read More</span>
-              <i className="bi bi-arrow-right ml-2"></i>
+              <div className="bi bi-arrow-right ml-2">
+                <FaArrowRightLong />
+              </div>
             </a>
           </div>
 

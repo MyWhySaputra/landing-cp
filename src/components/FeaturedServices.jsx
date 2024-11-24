@@ -15,9 +15,12 @@ export default function FeaturedServices() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div className="icon text-blue-600 text-3xl flex-shrink-0">
+            <a
+              href="#"
+              className="text-blue-600 hover:text-white text-3xl flex-shrink-0 p-7 bg-blue-200 hover:bg-blue-400 transition-all duration-300"
+            >
               <FaBriefcase />
-            </div>
+            </a>
             <div>
               <h4 className="title text-xl font-semibold">
                 <a href="#" className="stretched-link hover:text-blue-600">
@@ -37,9 +40,12 @@ export default function FeaturedServices() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div className="icon text-blue-600 text-3xl flex-shrink-0">
+            <a
+              href="#"
+              className="text-blue-600 hover:text-white text-3xl flex-shrink-0 p-7 bg-blue-200 hover:bg-blue-400 transition-all duration-300"
+            >
               <BsCardChecklist />
-            </div>
+            </a>
             <div>
               <h4 className="title text-xl font-semibold">
                 <a href="#" className="stretched-link hover:text-blue-600">
@@ -59,9 +65,12 @@ export default function FeaturedServices() {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <div className="icon text-blue-600 text-3xl flex-shrink-0">
+            <a
+              href="#"
+              className="text-blue-600 hover:text-white text-3xl flex-shrink-0 p-7 bg-blue-200 hover:bg-blue-400 transition-all duration-300"
+            >
               <FaChartBar />
-            </div>
+            </a>
             <div>
               <h4 className="title text-xl font-semibold">
                 <a href="#" className="stretched-link hover:text-blue-600">

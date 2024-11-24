@@ -1,3 +1,5 @@
+import img1 from "../assets/img/features-3.jpg";
+
 export default function MoreFeaturesSection() {
   const features = [
     {
@@ -27,12 +29,12 @@ export default function MoreFeaturesSection() {
   ];
 
   return (
-    <section id="more-features" className="more-features section py-16">
+    <section id="more-features" className="px-9 py-16">
       <div className="container mx-auto">
-        <div className="flex flex-wrap justify-around gap-8">
+        <div className="lg:flex flex-wrap justify-between gap-8">
           {/* Text and Icon Boxes */}
           <div
-            className="col-lg-6 flex flex-col justify-center order-2 lg:order-1"
+            className="flex-1 lg:w-1/2"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -45,12 +47,9 @@ export default function MoreFeaturesSection() {
               voluptate sed facere corporis dolores excepturi
             </p>
 
-            <div className="flex flex-wrap gap-6">
+            <div className="grid grid-cols-2 gap-6">
               {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="col-lg-6 icon-box flex items-center gap-4"
-                >
+                <div key={index} className="icon-box flex items-center gap-4">
                   <i
                     className={`bi ${feature.icon} text-4xl text-indigo-600`}
                   ></i>
@@ -65,12 +64,12 @@ export default function MoreFeaturesSection() {
 
           {/* Image Section */}
           <div
-            className="col-lg-5 order-1 lg:order-2"
+            className="flex-1 lg:w-1/2 mt-7"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <img
-              src="assets/img/features-3.jpg"
+              src={img1}
               alt="More Features"
               className="w-full h-auto rounded-lg shadow-lg"
             />

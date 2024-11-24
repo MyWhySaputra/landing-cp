@@ -16,41 +16,50 @@ export default function ContactSection() {
         data-aos-delay="100"
       >
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="col-lg-6">
+          {/* Address */}
+          <div>
             <div
-              className="info-item flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg"
+              className="info-item flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg min-h-[200px]"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <i className="bi bi-geo-alt text-4xl text-primary mb-3"></i>
               <h3 className="text-xl font-semibold text-gray-800">Address</h3>
-              <p className="text-gray-600">
-                A108 Adam Street, New York, NY 535022
+              <p className="text-gray-600 text-center max-w-xs">
+                Lantai 12 Zona B Jl.Prof Dr. Satrio Kav. E IV No.6 Mega
+                Kuningan, Kel.Karet Kuningan, Kec.Setia Budi Kota Administrasi
+                Jakarta Selatan 12940
               </p>
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-6">
+          {/* Call Us */}
+          <div>
             <div
-              className="info-item flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg"
+              className="info-item flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg min-h-[200px]"
               data-aos="fade-up"
               data-aos-delay="300"
             >
               <i className="bi bi-telephone text-4xl text-primary mb-3"></i>
               <h3 className="text-xl font-semibold text-gray-800">Call Us</h3>
-              <p className="text-gray-600">+1 5589 55488 55</p>
+              <p className="text-gray-600 text-center max-w-xs">
+                +1 5589 55488 55
+              </p>
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-6">
+          {/* Email Us */}
+          <div>
             <div
-              className="info-item flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg"
+              className="info-item flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg min-h-[200px]"
               data-aos="fade-up"
               data-aos-delay="400"
             >
               <i className="bi bi-envelope text-4xl text-primary mb-3"></i>
               <h3 className="text-xl font-semibold text-gray-800">Email Us</h3>
-              <p className="text-gray-600">info@example.com</p>
+              <p className="text-gray-600 text-center max-w-xs">
+                info@tdcdigital.id
+              </p>
             </div>
           </div>
         </div>
@@ -58,7 +67,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.65609174214!2d106.72645187409573!3d-6.176771960523984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7254a3f18dd%3A0xe59f40bd1359d096!2sAZ%20Solusindo!5e0!3m2!1sid!2sid!4v1732433900473!5m2!1sid!2sid"
               frameBorder="0"
               style={{ border: 0, width: "100%", height: "400px" }}
               allowFullScreen=""
@@ -117,15 +126,9 @@ export default function ContactSection() {
                 </div>
 
                 <div className="col-md-12 text-center">
-                  <div className="loading">Loading...</div>
-                  <div className="error-message text-red-500"></div>
-                  <div className="sent-message text-green-500">
-                    Your message has been sent. Thank you!
-                  </div>
-
                   <button
                     type="submit"
-                    className="px-6 py-3 mt-4 bg-primary text-white font-semibold rounded-lg"
+                    className="px-6 py-3 mt-4 bg-blue-600 text-white font-semibold rounded-lg"
                   >
                     Send Message
                   </button>

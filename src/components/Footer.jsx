@@ -7,7 +7,7 @@ export default function Footer() {
           <div className="footer-about">
             <a href="index.html" className="logo flex items-center mb-6">
               <span className="sitename text-2xl font-bold text-gray-800">
-                QuickStart
+                AZ <span className="text-blue-600">Company</span>
               </span>
             </a>
             <div className="footer-contact pt-3 text-gray-700">
@@ -131,11 +131,6 @@ export default function Footer() {
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg"
                 />
               </div>
-              {/* <div className="loading text-gray-600">Loading...</div>
-              <div className="error-message text-red-500"></div>
-              <div className="sent-message text-green-500">
-                Your subscription request has been sent. Thank you!
-              </div> */}
             </form>
           </div>
         </div>
@@ -144,7 +139,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="container mx-auto text-center mt-8">
         <p className="text-gray-600">
-          © <span className="font-semibold text-gray-800">QuickStart</span> All
+          © <span className="font-semibold text-gray-800">AZ Solusindo</span> All
           Rights Reserved
         </p>
       </div>

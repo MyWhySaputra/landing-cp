@@ -1,11 +1,16 @@
 import bgImage from "../assets/img/hero-bg-light.webp";
 
 export default function Hero() {
+
   return (
     <section id="hero" className="hero section relative h-screen">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img src={bgImage} alt="" className="w-full h-full object-cover opacity-20" />
+        <img
+          src={bgImage}
+          alt=""
+          className="w-full h-full object-cover opacity-20"
+        />
       </div>
 
       {/* Content */}
@@ -14,9 +19,10 @@ export default function Hero() {
           {/* Heading */}
           <h1
             data-aos="fade-up"
+            data-aos-delay="0"
             className="text-4xl md:text-6xl font-bold text-gray-900"
           >
-            Welcome to <span className="text-blue-600">QuickStart</span>
+            Welcome to <span className="text-blue-600">Company Name</span>
           </h1>
 
           {/* Subheading */}
@@ -25,7 +31,7 @@ export default function Hero() {
             data-aos-delay="100"
             className="mt-4 text-lg text-gray-600"
           >
-            Quickly start your project now and set the stage for success
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
 
           {/* Buttons */}

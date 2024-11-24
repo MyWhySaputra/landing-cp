@@ -7,12 +7,18 @@ import Features from "./components/Features";
 import FeatureDetail from "./components/FeaturesDetails";
 import ServicesSection from "./components/ServicesSection";
 import MoreFeaturesSection from "./components/MoreFeaturesSection";
-import Pricing from "./components/Pricing";
-import Testimonial from "./components/Testimonials";
+// import Pricing from "./components/Pricing";
+import Faq from "./components/Faq";
 import ContactSection from "./components/Contact";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({ once: true, offset: 250, duration: 1000 });
+  }, []);
   return (
     <>
       <Navbar />
@@ -24,8 +30,8 @@ export default function App() {
       <FeatureDetail />
       <ServicesSection />
       <MoreFeaturesSection />
-      <Pricing />
-      <Testimonial />
+      {/* <Pricing /> */}
+      <Faq />
       <ContactSection />
       <Footer />
     </>
